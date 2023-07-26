@@ -1,9 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 
 export function MainNav({
   className,
@@ -16,17 +16,17 @@ export function MainNav({
     {
       href: `/${params.storeId}`,
       label: 'Overview',
-      active: pathname === `${params.storeId}`
+      active: pathname === `/${params.storeId}`
     },
     {
       href: `/${params.storeId}/billboards`,
       label: 'Billboards',
-      active: pathname === `${params.storeId}/billboard`
+      active: pathname === `/${params.storeId}/billboards`
     },
     {
       href: `/${params.storeId}/settings`,
       label: 'Settings',
-      active: pathname === `${params.storeId}/settings`
+      active: pathname === `/${params.storeId}/settings`
     },
   ];
   
